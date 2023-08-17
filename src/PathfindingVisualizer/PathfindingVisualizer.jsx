@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Node from "./Node/Node";
-import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
+import { dijkstra, getNodesInShortestPathOrder } from "../Algorithms/dijkstra";
 
 import "./PathfindingVisualizer.css";
 
@@ -36,6 +36,32 @@ export default class PathfindingVisualizer extends Component {
 
   handleMouseUp() {
     this.setState({ mouseIsPressed: false });
+  }
+
+  animateDijkstra(visitedNodesInOrder, nodesInShortestPathOrder) {
+    for (let i = 0; i <= visitedNodesInOrder.length; i++) {
+      if (i === visitedNodesInOrder.length) {
+        setTimeout(() => {
+          this.animateShortestPath(nodesInShortestPathOrder);
+        }, 10 * i);
+        return;
+      }
+      setTimeout(() => {
+        const node = visitedNodesInOrder[i];
+        document.getElementById(`node-${node.row}-${node.col}`).className =
+          "node node-visited";
+      }, 10 * i);
+    }
+  }
+
+  animateShortestPath(nodesInShortestPathOrder) {
+    for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
+      setTimeout(() => {
+        const node = nodesInShortestPathOrder[i];
+        document.getElementById(`node-${node.row}-${node.col}`).className =
+          "node node-shortest-path";
+      }, 50 * i);
+    }
   }
 
   visualizeDijkstra() {
