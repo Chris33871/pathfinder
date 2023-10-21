@@ -1,12 +1,12 @@
-.navbar--div {
-    background-color: rgb(39, 84, 102, 0.95);
+.Legend--div {
+    background-color: rgba(255, 255, 255, 0.95);
     color: #212121;
     height: 70px;
     display: flex;
     position: relative;
   }
   
-  .navbar--title {
+  .Legend--title {
     margin-left: 10px;
     text-decoration: none;
     color:#212121;
@@ -15,34 +15,27 @@
     white-space: nowrap;
   }
   
-  .navbar--menu {
+  .Legend--menu {
     list-style-type: none;
     display: flex;
     justify-content:center;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    
   }
   
-  .navbar--menu button {
+  .Legend--menu button {
     margin-right: 10px;
     margin-top: 10px;
   }
-
-  .navbar--menu li {
-    color: #212121;
+  
+  .Legend--menu li {
+    color: #345B6D;
     text-decoration: none;
     padding: 5px 100px;
     font-size: 20px;
     font-weight: bold;
+    
   }
   
-  .navbar--menu li a {
-    color: #212121;
-    text-decoration: none;
-    padding: 5px 10px;
-  }
-  
-  .navbar--menu li a:hover {
-    color: #FFFFFF;
-  }
