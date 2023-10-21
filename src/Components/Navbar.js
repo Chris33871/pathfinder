@@ -2,6 +2,11 @@ import React from "react";
 import "./Navbar.css";
 import MultiSelect from "./MultiSelect";
 
+const ClearScreen = () => {
+  // Needs to be changed to only reload the grid
+  window.location.reload();
+};
+
 export default class Navbar extends React.Component {
   render() {
     return (
@@ -10,9 +15,8 @@ export default class Navbar extends React.Component {
           <h2>PathfindingVisualizer</h2>
         </div>
         <ul className="navbar--menu">
-          {/* <button>Select Algorithm</button> */}
           <MultiSelect />
-          <button>Clear</button>
+          <button onClick={ClearScreen}>Clear</button>
         </ul>
       </div>
     );
