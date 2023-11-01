@@ -1,5 +1,12 @@
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
 .App {
   text-align: center;
+  font-family: ubuntu, light, 300;
 }
 
 .App-logo {

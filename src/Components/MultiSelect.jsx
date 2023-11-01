@@ -1,4 +1,5 @@
 import React from "react";
+import "./Navbar.css";
 
 class MultiSelect extends React.Component {
   constructor(props) {
@@ -10,10 +11,20 @@ class MultiSelect extends React.Component {
 
   render() {
     return (
-      <select multiple={false} value={["Dijkstra", "Other", "Other2"]}>
-        <option value="A">Dijkstra's</option>
-        <option value="B">Other</option>
-        <option value="C">Other 2</option>
+      <select
+        className="dropdown--multiselect"
+        multiple={false}
+        value={["Dijkstra", "Other", "Other2"]}
+      >
+        <option className="dropdown--option" value="A">
+          Dijkstra's
+        </option>
+        <option className="dropdown--option" value="B">
+          Other
+        </option>
+        <option className="dropdown--option" value="C">
+          Other
+        </option>
       </select>
     );
   }
