@@ -15,7 +15,6 @@ export default class Navbar extends React.Component {
           <h2>PathfindingVisualizer</h2>
         </div>
         <ul className="navbar--menu">
-          {/* <button>Select Algorithm</button> */}
           <MultiSelect />
           <button onClick={ClearScreen}>Clear</button>
         </ul>
